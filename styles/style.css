@@ -1,21 +1,23 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /*НЕЛЬЗЯ МЕНЯТЬ*/
 }
 
 html {
-  block-size: 100%;
+  block-size: 100%; /*НЕЛЬЗЯ МЕНЯТЬ*/
 }
 
-.page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
+.page { 
+  display: grid;
+  place-items: center;
+  inline-size: 1200px; /*НЕЛЬЗЯ МЕНЯТЬ*/
+  block-size: 100%; /*НЕЛЬЗЯ МЕНЯТЬ*/
+  margin: auto; /*НЕЛЬЗЯ МЕНЯТЬ*/
+  color: #fff; /*НЕЛЬЗЯ МЕНЯТЬ*/
+  font-family: 'Fira Sans Condensed', sans-serif; /*НЕЛЬЗЯ МЕНЯТЬ*/
+  font-size: 18px; /*НЕЛЬЗЯ МЕНЯТЬ*/
+  background-color: #1b1919; /*НЕЛЬЗЯ МЕНЯТЬ*/
 }
 
 h1,
@@ -28,24 +30,148 @@ ol,
 li,
 blockquote,
 fieldset {
-  margin: 0;
-  padding: 0;
+  margin: 0; /*НЕЛЬЗЯ МЕНЯТЬ*/
+  padding: 0; /*НЕЛЬЗЯ МЕНЯТЬ*/
 }
 
 ul,
 ol {
-  list-style: none;
+  list-style: none; /*НЕЛЬЗЯ МЕНЯТЬ*/
 }
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
+  width: 4px; /*НЕЛЬЗЯ МЕНЯТЬ*/
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
+  background: rgb(217 217 217 / 10%); /*НЕЛЬЗЯ МЕНЯТЬ*/
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #D9D9D9; /*НЕЛЬЗЯ МЕНЯТЬ*/
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.content {
+  display: grid;
+  align-items: end;
+  gap: 30px;
+  max-width: 1140px;
+  grid-template-columns: 711px 399px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.content__list {
+  display: grid;
+  gap: 30px;
+}
+
+.content__list-item:last-child {
+  padding-bottom: 30px;
+}
+
+.content__list-container {
+  max-height: 298px;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/*.content__list-container .preloader-template {
+  position: absolute;
+} */
+
+.content__details {
+  display: grid;
+  gap: 26px;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px; 
+  position: relative; 
+  overflow: hidden; 
+  margin-bottom: 16px;
+}
+
+/*.result__video-container .preloader-template {
+  position: absolute;
+} */
+
+.result__video {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  min-width: 194px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  opacity: 0.3;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
 }
