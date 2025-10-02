@@ -9,8 +9,9 @@ html {
 }
 
 .page { 
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -292,7 +293,11 @@ input[type='checkbox']:checked + span {
   background-color: #fff;
 }
 
-.content__card-link_current:active {
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
   background-color: #545050;
 }
 
